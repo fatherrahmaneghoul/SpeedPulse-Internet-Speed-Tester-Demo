@@ -1,0 +1,762 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F4F8;
+}
+
+/* Navbar styling */
+/* General Styles */
+nav {
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+nav .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Logo Styles */
+.nav-content .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-content .logo a {
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    margin-left: 10px;
+    background: linear-gradient(0deg, #007BFF 0%, black 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position: bottom;
+    transition: background-position 0.5s ease;
+}
+
+.nav-content .logo a:hover {
+    background-position: top;
+}
+
+/* Navigation Links */
+.nav-content .nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.nav-content .nav-links li {
+    list-style: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-content .nav-links li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #4F4F4F;
+    padding: 10px 4px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-content .nav-links li a:hover {
+    color: #007BFF;
+}
+
+.nav-content .nav-links li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #007BFF;
+    transition: width 0.4s ease;
+}
+
+.nav-content .nav-links li:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #4F4F4F;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Nav Links - Hidden by default */
+.mobile-nav-links {
+    display: none;
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+}
+
+.mobile-nav-links li {
+    margin: 10px 0;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Speed Test Section */
+.speed-test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.graph {
+    margin-bottom: 20px;
+}
+
+canvas {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 80px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    background-color: white;
+    /* White background */
+}
+
+th,
+td {
+    border: 1px solid #b5b5b5;
+    /* Grey borders */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: white;
+}
+
+.page-section {
+    padding: 100px 20px 60px 20px;
+}
+
+/* Styling for intro section with shadow */
+#intro-apps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.intro-text {
+    margin-left: 50px;
+    max-width: 50%;
+    margin-bottom: 50px;
+    animation: slideInLeft 1s ease-out forwards;
+    /* Slide in from left */
+}
+
+.intro-text h1 {
+    font-size: 36px;
+    color: #007BFF;
+    /* Blue color for SpeedPulse text */
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Styling for the image */
+/* Styling for the image */
+.intro-image img {
+    width: 500px;
+    height: auto;
+    margin-right: 120px;
+    padding: 0;
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+    /* Initial state for the animation */
+    animation: zoomIn 1.5s ease-out forwards;
+    /* Animation applied */
+}
+
+/* Zoom in and fade-in effect */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+        /* Slightly smaller and lower */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        /* Full size and position */
+    }
+}
+
+/* Animation for sliding text in from the left */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Second Layer */
+#available-apps {
+    background-color: #eeeeeed1;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.app-details {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.platform {
+    width: 220px;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation effect for borders */
+.platform::before,
+.platform::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    pointer-events: none;
+}
+
+.platform::before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid #007bff;
+    border-left: 2px solid #007bff;
+    transition: width 0.4s ease-out, height 0.4s ease-out;
+    width: 0;
+    height: 0;
+}
+
+.platform::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid #007bff;
+    border-right: 2px solid #007bff;
+    transition: width 0.4s ease-out, height 0.4s ease-out;
+    width: 0;
+    height: 0;
+}
+
+.platform:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.platform:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+/* Platform logo styling */
+.platform-logo {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.platform h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.platform p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Space between section title and content */
+#available-apps h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+}
+@keyframes colorChange {
+    0% {
+        color: #007bff;
+    }
+
+    /* Initial blue */
+    25% {
+        color: #0056b3;
+    }
+
+    /* Darker blue */
+    50% {
+        color: #003f7f;
+    }
+
+    /* Even darker blue */
+    75% {
+        color: #0056b3;
+    }
+
+    /* Back to mid blue */
+    100% {
+        color: #007bff;
+    }
+
+    /* Return to initial blue */
+}
+
+#available-apps h2 {
+    animation: colorChange 3s infinite alternate;
+    /* Infinite animation with alternate direction */
+}
+/* Footer */
+footer {
+    background: linear-gradient(to right, #0056b3, #007bff);
+    /* Gradient background */
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.footer-column {
+    margin: 0 20px;
+    /* Space between columns */
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    /* Space between heading and links */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    /* Remove default padding */
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+    /* Space between links */
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* About Us Section */
+#about-us {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+#about-us h2 {
+    font-size: 36px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 18px;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* FAQ Section */
+#faq {
+    background-color: #F0F4F8;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#faq h2 {
+    font-size: 36px;
+    color: #0056b3;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 15px 20px;
+    background-color: #007BFF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #0056b3;
+}
+
+.faq-answer {
+    padding: 0 20px 15px;
+    display: none;
+    background-color: #f9f9f9;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.arrow {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .arrow {
+    transform: rotate(180deg);
+    /* Rotate arrow when the answer is visible */
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+/* Learn More Section */
+#learn-more {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeInLeft 1s ease-out;
+}
+
+#learn-more h2 {
+    font-size: 36px;
+    color: #003f7f;
+    margin-bottom: 20px;
+}
+
+#learn-more p {
+    font-size: 18px;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.learn-more-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Applies to the entire document */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    /* Gradient background */
+    border-radius: 6px;
+    /* Rounded corners */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #329fff, #a6b3e0);
+    /* Gradient color for the handle */
+    border-radius: 6px;
+    /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #6998bf, #b2c8ff);
+    /* Darker gradient on hover */
+}
+
+/* For Firefox */
+.scrollable-element {
+    scrollbar-width: thin;
+    /* Sets scrollbar width */
+    scrollbar-color: #65a5ad #e0eafc;
+    /* Thumb color, track color */
+}
+
+/* For Firefox on hover */
+.scrollable-element:hover {
+    scrollbar-color: #3ba4ff #e0eafc;
+    /* Darker color when hovered */
+}
+
+/* Example content for scrolling */
+.scrollable-element {
+    height: 300px;
+    /* Increase height for better visibility */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f5f5f5;
+    /* Light background for contrast */
+}
+
+/* Content style */
+.content {
+    height: 800px;
+    /* Ensure content is long enough to scroll */
+    background: linear-gradient(to bottom, #ffffff, #dfe9f3);
+    padding: 20px;
+    border-radius: 8px;
+    /* Rounded corners for content */
+}
+
+
+/* Phone Optimization */
+/* Global Styles for Mobile Optimization */
+@media (max-width: 768px) {
+
+    /* Home Page Optimization */
+    .nav-content .nav-links {
+            display: none;
+        }
+    
+        .hamburger {
+            display: flex;
+        }
+    
+        .mobile-nav-links {
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            padding: 20px;
+            width: 200px;
+            z-index: 100;
+            margin-top: 20px;
+        }
+    
+        .mobile-nav-links li {
+            margin-bottom: 10px;
+        }
+    
+        .mobile-nav-links a {
+            color: white;
+            font-size: 18px;
+        }
+        
+    .table {
+        width: 100%;
+        /* Make table full width */
+    }
+
+    #speedTable{
+        margin-bottom: 50px;
+    }
+    /* Apps Page Optimization */
+    .intro-img {
+        width: 100%;
+        /* Make intro image smaller and responsive */
+        margin: 20px 0;
+        /* Add margin above and below */
+    }
+
+    .available-apps {
+        display: flex;
+        /* Flex for available apps */
+        flex-direction: column;
+        /* Stack apps vertically */
+        width: 100%;
+        /* Full width */
+    }
+
+    .footer {
+        position: relative;
+        /* Position footer relative */
+        width: 100%;
+        /* Full width */
+    }
+
+    /* About Page Optimization */
+    body {
+        min-height: 100vh;
+        /* Ensure body takes full height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Space between content and footer */
+    }
+
+    .footer {
+        margin-top: auto;
+        /* Push footer to the end */
+    }
+    #appImage{
+        display: none;
+    }
+    .intro-text{
+        margin: auto;
+        
+    }
+}

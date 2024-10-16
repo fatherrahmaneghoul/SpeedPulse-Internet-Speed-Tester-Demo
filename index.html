@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedPulse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Pictures/speedpulse logo no bg.png">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html"><img src="Pictures/speedpulse logo no bg.png" alt="Logo" class="logo-img"></a>
+                <a href="index.html" class="title">SpeedPulse</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="apps.html">APPS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="mobile-nav-links" id="mobileMenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="apps.html">APPS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Speed Test Section -->
+    <div class="speed-test">
+        <div class="graph">
+            <canvas id="pulseCanvas" width="600" height="300"></canvas>
+        </div>
+        <button id="testButton">Test Speed</button>
+    </div>
+
+    <table id="speedTable">
+        <thead>
+            <tr>
+                <th>Ping</th>
+                <th>Download Speed</th>
+                <th>Upload Speed</th>
+                <th>Server Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="ping">-- ms</td>
+                <td id="download">-- Mbps</td>
+                <td id="upload">-- Mbps</td>
+                <td id="location">--</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
