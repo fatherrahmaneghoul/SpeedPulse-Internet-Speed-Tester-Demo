@@ -273,7 +273,7 @@ th {
 }
 /* Second Layer */
 #available-apps {
-    background-color: #eeeeeed1;
+    background-color: #efefef;
     text-align: center;
     padding: 50px 20px;
 }
@@ -712,7 +712,7 @@ footer {
     }
 
     #speedTable{
-        margin-bottom: 50px;
+        margin-bottom: 180px;
     }
     /* Apps Page Optimization */
     .intro-img {
@@ -759,4 +759,64 @@ footer {
         margin: auto;
         
     }
+         .graph {
+             width: 100%;
+             /* Make the graph full width */
+             height: auto;
+             /* Height auto to maintain aspect ratio */
+         }
+    
+         #pulseCanvas {
+             width: 100%;
+             /* Make the canvas responsive */
+             height: auto;
+             /* Maintain aspect ratio */
+         }
+    
+         table {
+             font-size: 14px;
+             /* Reduce table font size for smaller screens */
+         }
+    
+         th,
+         td {
+             padding: 5px;
+             /* Reduce padding for table cells */
+         }
+        .app-details {
+            display: flex;
+            flex-direction: column;
+            /* Stack items vertically */
+            align-items: center;
+            /* Center align the items */
+            padding: 20px;
+            /* Optional: Add some padding */
+        }
+
+        .platform {
+            width: 90%;
+            /* Use most of the width */
+            max-width: 350px;
+            /* Set a max width */
+            margin: 10px 0;
+            /* Vertical spacing between items */
+            text-align: center;
+            /* Center text */
+            border: 1px solid #ddd;
+            /* Optional: add a border */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 15px;
+            /* Padding inside the card */
+            box-sizing: border-box;
+            /* Include padding in width */
+        }
+
+        .platform-logo {
+            width: 50px;
+            /* Optional: Set a fixed width for logos */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
 }
